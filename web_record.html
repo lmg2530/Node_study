@@ -247,15 +247,14 @@
     var audiodata;
     var audio = document.querySelector('audio');
 	function startRecording() { //녹음 시작하기
-        HZRecorder.get(function (rec) { //파일 가져오기
-            audiodata = rec; //가져온 파일을 recorder 객체 복사
+        HZRecorder.get(function (rec) { //audio data 가져오기
+            audiodata = rec; 
             audiodata.start();
         });
     }
-    function obtainRecord(){ // 녹음 데이터 가져오기 데이터 다시 받아오는거 구현해야함
+    function obtainRecord(){ // 녹음 다시 시작 
     	console.log("다시 시작");
     	audiodata.restart();
-        //debugger;//일시 정지 코딩중 일시정지인데 
     };
     function stopRecord(){ //녹음 끄기
     	console.log("녹음끄기");
